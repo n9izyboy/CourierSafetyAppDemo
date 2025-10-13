@@ -56,11 +56,34 @@
                         </VerticalStackLayout>
                     </Grid>
 
+                    <Grid Padding="20, 16"
+                          BackgroundColor="White">
+
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <VerticalStackLayout Grid.Column="1"
+                       Spacing="2">
+                            <Label Text="Analytics"
+               FontSize="16"
+               FontAttributes="Bold"
+               TextColor="#111827"/>
+                            <Label Text="Performance data"
+               FontSize="13"
+               TextColor="#6B7280"/>
+                        </VerticalStackLayout>
+                        <Image Source="analytics_icon.png"
+                                   WidthRequest="24"
+                                   HeightRequest="24"
+                                   Grid.Column="0"/>
+
+                    </Grid>
+
                     <Grid Padding="20,16"
                               BackgroundColor="White">
-                        <Grid.GestureRecognizers>
-                            
-                        </Grid.GestureRecognizers>
+                        
+                        
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="40"/>
                             <ColumnDefinition Width="*"/>
@@ -80,6 +103,8 @@
                                        TextColor="#6B7280"/>
                         </VerticalStackLayout>
                     </Grid>
+                    
+                    
 
 
                     <Grid Padding="20,16"
