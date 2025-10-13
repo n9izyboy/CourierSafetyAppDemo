@@ -6,8 +6,6 @@
     <ScrollView>
         <VerticalStackLayout>
             <StackLayout BackgroundColor="#F8F9FA">
-
-                
                 <Grid Padding="20,40,20,20"
                       BackgroundColor="White">
                     <HorizontalStackLayout Spacing="12">
@@ -80,33 +78,34 @@
 
                     </Grid>
 
-                    <Grid Padding="20,16"
-                              BackgroundColor="White">
-                        
-                        
+
+                    <Grid Padding="20, 16"
+                          BackgroundColor="White">
+                        <Grid.GestureRecognizers>
+                            
+                        </Grid.GestureRecognizers>
+
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="40"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image Source="analytics_icon.png"
+                        <Image Source="safety_icon.png"
                                    WidthRequest="24"
-                                   HeightRequest="24"
-                                   Grid.Column="0"/>
+                                   HeightRequest="24"/>
                         <VerticalStackLayout Grid.Column="1"
-                                               Spacing="2">
-                            <Label Text="Analytics"
-                                       FontSize="16"
-                                       FontAttributes="Bold"
-                                       TextColor="#111827"/>
-                            <Label Text="Performance data"
-                                       FontSize="13"
-                                       TextColor="#6B7280"/>
+                                             Spacing="2">
+                            <Label Text="Safety Reports"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   TextColor="#111827"/>
+                            <Label Text="Incident tracking"
+                                   FontSize="13"
+                                   TextColor="#6B7280"/>
                         </VerticalStackLayout>
+                         
                     </Grid>
                     
                     
-
-
                     <Grid Padding="20,16"
                               BackgroundColor="White">
                         <Grid.GestureRecognizers>
@@ -131,8 +130,9 @@
                                        TextColor="#6B7280"/>
                         </VerticalStackLayout>
                     </Grid>
-                    
-                    
+
+                   
+
 
                     <Border Margin="20"
                             Padding="16"
@@ -198,9 +198,6 @@
                             </HorizontalStackLayout>
                         </StackLayout>
                     </Border>
-
-
-
                 </StackLayout>
             </StackLayout>
         </VerticalStackLayout>
