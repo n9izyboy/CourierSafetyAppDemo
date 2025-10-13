@@ -95,7 +95,7 @@
                         <VerticalStackLayout Grid.Column="1"
                                              Spacing="2">
                             <Label Text="Safety Reports"
-                                   FontSize="13"
+                                   FontSize="16"
                                    FontAttributes="Bold"
                                    TextColor="#111827"/>
                             <Label Text="Incident tracking"
@@ -131,8 +131,29 @@
                         </VerticalStackLayout>
                     </Grid>
 
-                   
 
+                    <Grid Padding="20,16"
+                          BackgroundColor="White">
+                        <Grid.GestureRecognizers>
+                        </Grid.GestureRecognizers>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <VerticalStackLayout Grid.Column="1"
+                                             Spacing="2">
+                            <Label Text="Settings"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"/>
+
+                            <Label Text="System Configuration"
+                                   FontSize="13"
+                                   TextColor="Grey"/>
+
+                        </VerticalStackLayout>
+
+                    </Grid>
 
                     <Border Margin="20"
                             Padding="16"
