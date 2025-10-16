@@ -54,7 +54,8 @@
                    TextColor="#B8BADE"
                    Margin="0,4,0,0"/>
         </Grid>
-
+        
+        
 
 
         <ScrollView Grid.Row="1" BackgroundColor="#F5F3FF">
@@ -73,6 +74,12 @@
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
+
+  
+
+
+   
+       
     
     
 </ContentPage>
