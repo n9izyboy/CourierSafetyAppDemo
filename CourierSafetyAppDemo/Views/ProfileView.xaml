@@ -1,7 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CourierSafetyAppDemo.MainPage">
+             x:Class="CourierSafetyAppDemo.Views.ProfileView"
+             Title="ProfileView">
+    
+    
+    
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -11,8 +15,8 @@
 
         <!-- Header Section with Profile Info -->
         <Grid Grid.Row="0" 
-          Padding="20,12,20,24"
-          BackgroundColor="#6366F1">
+              Padding="20,12,20,24"
+              BackgroundColor="#6366F1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -21,25 +25,25 @@
             <!-- Top Bar with SafeRoute -->
             <Grid Grid.Row="0">
                 <Label Text="SafeRoute"
-                   FontSize="16"
-                   FontAttributes="Bold"
-                   TextColor="White"
-                   VerticalOptions="Center"/>
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       VerticalOptions="Center"/>
 
                 <HorizontalStackLayout HorizontalOptions="End" Spacing="12">
                     <Image Source="location_icon.png"
-                       WidthRequest="18"
-                       HeightRequest="18"/>
+                           WidthRequest="18"
+                           HeightRequest="18"/>
                     <Image Source="wifi_icon.png"
-                       WidthRequest="18"
-                       HeightRequest="18"/>
+                           WidthRequest="18"
+                           HeightRequest="18"/>
                     <Image Source="battery_icon.png"
-                       WidthRequest="18"
-                       HeightRequest="18"/>
+                           WidthRequest="18"
+                           HeightRequest="18"/>
                     <Label Text="85%"
-                       FontSize="12"
-                       TextColor="White"
-                       VerticalOptions="Center"/>
+                           FontSize="12"
+                           TextColor="White"
+                           VerticalOptions="Center"/>
                 </HorizontalStackLayout>
             </Grid>
 
@@ -52,34 +56,34 @@
 
                 <!-- Avatar -->
                 <Border Grid.Column="0"
-                    BackgroundColor="White"
-                    StrokeThickness="0"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    VerticalOptions="Start">
+                        BackgroundColor="White"
+                        StrokeThickness="0"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        VerticalOptions="Start">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="40"/>
                     </Border.StrokeShape>
                     <Label Text="JD"
-                       FontSize="32"
-                       FontAttributes="Bold"
-                       TextColor="#6366F1"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           TextColor="#6366F1"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
                 </Border>
 
                 <!-- User Info -->
                 <VerticalStackLayout Grid.Column="1" Spacing="4" VerticalOptions="Center">
                     <Label Text="John Doe"
-                       FontSize="24"
-                       FontAttributes="Bold"
-                       TextColor="White"/>
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="White"/>
                     <Label Text="Courier ID: #CD-2024-1547"
-                       FontSize="13"
-                       TextColor="#C7D2FE"/>
+                           FontSize="13"
+                           TextColor="#C7D2FE"/>
                     <Label Text="Member since Jan 2024"
-                       FontSize="12"
-                       TextColor="#C7D2FE"/>
+                           FontSize="12"
+                           TextColor="#C7D2FE"/>
                 </VerticalStackLayout>
             </Grid>
         </Grid>
@@ -92,8 +96,8 @@
                 <VerticalStackLayout Spacing="12">
                     <!-- Dark Mode Toggle -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="0"
-                        Padding="16">
+                            StrokeThickness="0"
+                            Padding="16">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="14"/>
                         </Border.StrokeShape>
@@ -109,41 +113,41 @@
 
                             <!-- Icon -->
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="moon_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <!-- Label -->
                             <Label Grid.Column="1"
-                               Text="Dark Mode"
-                               FontSize="16"
-                               FontAttributes="Bold"
-                               TextColor="#111827"
-                               VerticalOptions="Center"/>
+                                   Text="Dark Mode"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#111827"
+                                   VerticalOptions="Center"/>
 
                             <!-- Toggle -->
                             <Switch Grid.Column="2"
-                                IsToggled="False"
-                                VerticalOptions="Center"
-                                ThumbColor="#6366F1"
-                                OnColor="#6366F1"/>
+                                    IsToggled="False"
+                                    VerticalOptions="Center"
+                                    ThumbColor="#6366F1"
+                                    OnColor="#6366F1"/>
                         </Grid>
                     </Border>
 
                     <!-- Push Notifications Toggle -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="0"
-                        Padding="16">
+                            StrokeThickness="0"
+                            Padding="16">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="14"/>
                         </Border.StrokeShape>
@@ -159,34 +163,34 @@
 
                             <!-- Icon -->
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="bell_notification_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <!-- Label -->
                             <Label Grid.Column="1"
-                               Text="Push Notifications"
-                               FontSize="16"
-                               FontAttributes="Bold"
-                               TextColor="#111827"
-                               VerticalOptions="Center"/>
+                                   Text="Push Notifications"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="#111827"
+                                   VerticalOptions="Center"/>
 
                             <!-- Toggle -->
                             <Switch Grid.Column="2"
-                                IsToggled="True"
-                                VerticalOptions="Center"
-                                ThumbColor="#6366F1"
-                                OnColor="#6366F1"/>
+                                    IsToggled="True"
+                                    VerticalOptions="Center"
+                                    ThumbColor="#6366F1"
+                                    OnColor="#6366F1"/>
                         </Grid>
                     </Border>
                 </VerticalStackLayout>
@@ -194,16 +198,16 @@
                 <!-- Main Features Section -->
                 <VerticalStackLayout Spacing="0">
                     <Label Text="MAIN FEATURES"
-                       FontSize="12"
-                       FontAttributes="Bold"
-                       TextColor="#9CA3AF"
-                       Margin="0,0,0,12"/>
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextColor="#9CA3AF"
+                           Margin="0,0,0,12"/>
 
                     <!-- Route Planning -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="14,14,0,0"/>
                         </Border.StrokeShape>
@@ -218,44 +222,44 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="route_plan_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Route Planning"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="Plan safe delivery routes"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
 
                     <!-- Crime Log -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16"
-                        Margin="0,-1,0,0">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16"
+                            Margin="0,-1,0,0">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="0"/>
                         </Border.StrokeShape>
@@ -267,44 +271,44 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="crime_log_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Crime Log"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="View recent incidents"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
 
                     <!-- Emergency SOS -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16"
-                        Margin="0,-1,0,0">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16"
+                            Margin="0,-1,0,0">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="0,0,14,14"/>
                         </Border.StrokeShape>
@@ -319,35 +323,35 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#FEE2E2"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#FEE2E2"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="sos_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Emergency SOS"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#EF4444"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#EF4444"/>
                                 <Label Text="Quick access to help"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
                 </VerticalStackLayout>
@@ -355,16 +359,16 @@
                 <!-- Account Section -->
                 <VerticalStackLayout Spacing="0" Margin="0,20,0,0">
                     <Label Text="ACCOUNT"
-                       FontSize="12"
-                       FontAttributes="Bold"
-                       TextColor="#9CA3AF"
-                       Margin="0,0,0,12"/>
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextColor="#9CA3AF"
+                           Margin="0,0,0,12"/>
 
                     <!-- Profile Settings -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="14,14,0,0"/>
                         </Border.StrokeShape>
@@ -379,44 +383,44 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="profile_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Profile"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="Manage your account"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
 
                     <!-- Alert Preferences -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16"
-                        Margin="0,-1,0,0">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16"
+                            Margin="0,-1,0,0">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="0"/>
                         </Border.StrokeShape>
@@ -428,44 +432,44 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="alert_pref_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Alert Preferences"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="Customize notifications"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
 
                     <!-- Map Settings -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16"
-                        Margin="0,-1,0,0">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16"
+                            Margin="0,-1,0,0">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="0,0,14,14"/>
                         </Border.StrokeShape>
@@ -480,35 +484,35 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="map_settings_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Map Settings"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="Default layers &amp; zoom"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
                 </VerticalStackLayout>
@@ -516,16 +520,16 @@
                 <!-- Support Section -->
                 <VerticalStackLayout Spacing="0" Margin="0,20,0,0">
                     <Label Text="SUPPORT"
-                       FontSize="12"
-                       FontAttributes="Bold"
-                       TextColor="#9CA3AF"
-                       Margin="0,0,0,12"/>
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextColor="#9CA3AF"
+                           Margin="0,0,0,12"/>
 
                     <!-- Help & Support -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="14,14,0,0"/>
                         </Border.StrokeShape>
@@ -540,44 +544,44 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="help_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Help &amp; Support"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="FAQs and contact"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
 
                     <!-- Emergency Contacts -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16"
-                        Margin="0,-1,0,0">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16"
+                            Margin="0,-1,0,0">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="0"/>
                         </Border.StrokeShape>
@@ -589,44 +593,44 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="phone_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="Emergency Contacts"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="Manage emergency contacts"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
 
                     <!-- App Settings -->
                     <Border BackgroundColor="White"
-                        StrokeThickness="1"
-                        Stroke="#E5E7EB"
-                        Padding="16"
-                        Margin="0,-1,0,0">
+                            StrokeThickness="1"
+                            Stroke="#E5E7EB"
+                            Padding="16"
+                            Margin="0,-1,0,0">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="0,0,14,14"/>
                         </Border.StrokeShape>
@@ -641,35 +645,35 @@
                             </Grid.ColumnDefinitions>
 
                             <Border Grid.Column="0"
-                                BackgroundColor="#F3F4F6"
-                                StrokeThickness="0"
-                                WidthRequest="44"
-                                HeightRequest="44">
+                                    BackgroundColor="#F3F4F6"
+                                    StrokeThickness="0"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
                                 </Border.StrokeShape>
                                 <Image Source="settings_icon.png"
-                                   WidthRequest="22"
-                                   HeightRequest="22"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center"/>
+                                       WidthRequest="22"
+                                       HeightRequest="22"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
                             </Border>
 
                             <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
                                 <Label Text="App Settings"
-                                   FontSize="16"
-                                   FontAttributes="Bold"
-                                   TextColor="#111827"/>
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#111827"/>
                                 <Label Text="General preferences"
-                                   FontSize="13"
-                                   TextColor="#6B7280"/>
+                                       FontSize="13"
+                                       TextColor="#6B7280"/>
                             </VerticalStackLayout>
 
                             <Image Grid.Column="2"
-                               Source="chevron_right_icon.png"
-                               WidthRequest="20"
-                               HeightRequest="20"
-                               VerticalOptions="Center"/>
+                                   Source="chevron_right_icon.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"
+                                   VerticalOptions="Center"/>
                         </Grid>
                     </Border>
                 </VerticalStackLayout>
@@ -682,9 +686,9 @@
 
         <!-- Bottom Navigation Bar -->
         <Grid Grid.Row="2"
-          Padding="8,10,8,25"
-          BackgroundColor="White"
-          ColumnSpacing="0">
+              Padding="8,10,8,25"
+              BackgroundColor="White"
+              ColumnSpacing="0">
             <Grid.Shadow>
                 <Shadow Brush="Black" Opacity="0.08" Radius="20" Offset="0,-4"/>
             </Grid.Shadow>
@@ -697,63 +701,63 @@
 
             <!-- Home -->
             <VerticalStackLayout Grid.Column="0" 
-                           Spacing="4" 
-                           HorizontalOptions="Center">
-
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+               
                 <Image Source="home_icon_gray.png"
-                   WidthRequest="24"
-                   HeightRequest="24"/>
+                       WidthRequest="24"
+                       HeightRequest="24"/>
                 <Label Text="Home"
-                   FontSize="11"
-                   TextColor="#9CA3AF"
-                   HorizontalOptions="Center"/>
+                       FontSize="11"
+                       TextColor="#9CA3AF"
+                       HorizontalOptions="Center"/>
             </VerticalStackLayout>
 
             <!-- Routes -->
             <VerticalStackLayout Grid.Column="1" 
-                           Spacing="4" 
-                           HorizontalOptions="Center">
-
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+                
                 <Image Source="map_icon_gray.png"
-                   WidthRequest="24"
-                   HeightRequest="24"/>
+                       WidthRequest="24"
+                       HeightRequest="24"/>
                 <Label Text="Routes"
-                   FontSize="11"
-                   TextColor="#9CA3AF"
-                   HorizontalOptions="Center"/>
+                       FontSize="11"
+                       TextColor="#9CA3AF"
+                       HorizontalOptions="Center"/>
             </VerticalStackLayout>
 
             <!-- Alerts -->
             <VerticalStackLayout Grid.Column="2" 
-                           Spacing="4" >
+                               Spacing="4" >
 
                 <Image Source="bell_icon_gray.png"
-                   WidthRequest="24"
-                   HeightRequest="24"/>
+                       WidthRequest="24"
+                       HeightRequest="24"/>
                 <Label Text="Alerts"
-                   FontSize="11"
-                   TextColor="#9CA3AF"
-                   HorizontalOptions="Center"/>
+                       FontSize="11"
+                       TextColor="#9CA3AF"
+                       HorizontalOptions="Center"/>
             </VerticalStackLayout>
 
             <!-- Profile (Active) -->
             <VerticalStackLayout Grid.Column="3" 
-                           Spacing="4" 
-                           HorizontalOptions="Center">
-
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+              
                 <Border BackgroundColor="#E0E7FF"
-                    StrokeThickness="0"
-                    Padding="12,8"
-                    WidthRequest="44"
-                    HeightRequest="44">
+                        StrokeThickness="0"
+                        Padding="12,8"
+                        WidthRequest="44"
+                        HeightRequest="44">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="12"/>
                     </Border.StrokeShape>
                     <Image Source="profile_icon_purple.png"
-                       WidthRequest="24"
-                       HeightRequest="24"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
+                           WidthRequest="24"
+                           HeightRequest="24"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
                 </Border>
             </VerticalStackLayout>
         </Grid>

@@ -10,7 +10,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-
+        <!-- Header Section -->
         <Grid Grid.Row="0" 
               Padding="20,50,20,20" 
               BackgroundColor="#5B5FC7">
@@ -26,7 +26,7 @@
                        TextColor="White"
                        VerticalOptions="Center"/>
 
-
+                <!-- Layers Button -->
                 <Border HorizontalOptions="End"
                         BackgroundColor="#7478CC"
                         StrokeThickness="0"
@@ -54,12 +54,12 @@
                    TextColor="#B8BADE"
                    Margin="0,4,0,0"/>
         </Grid>
-        
-        
 
-
+        <!-- Main Content -->
         <ScrollView Grid.Row="1" BackgroundColor="#F5F3FF">
             <VerticalStackLayout Spacing="16" Padding="16">
+
+                <!-- Map Container with Safety Zones Legend -->
                 <Border BackgroundColor="White"
                         StrokeThickness="0"
                         Padding="0"
@@ -70,16 +70,451 @@
                     <Border.Shadow>
                         <Shadow Brush="Black" Opacity="0.12" Radius="20" Offset="0,8"/>
                     </Border.Shadow>
+                    <Grid>
+                        <!-- Map Image Background -->
+                        <Image Source="safety_map_aerial.png"
+                               Aspect="AspectFill">
+                            <Image.Clip>
+                                <RoundRectangleGeometry CornerRadius="20" 
+                                                       Rect="0,0,1000,420"/>
+                            </Image.Clip>
+                        </Image>
+
+                        <!-- Safety Zones Legend (Top Left) -->
+                        <Border BackgroundColor="White"
+                                StrokeThickness="0"
+                                Padding="16,14"
+                                Margin="16,16,0,0"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                WidthRequest="150">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14"/>
+                            </Border.StrokeShape>
+                            <Border.Shadow>
+                                <Shadow Brush="Black" Opacity="0.15" Radius="12" Offset="0,4"/>
+                            </Border.Shadow>
+                            <VerticalStackLayout Spacing="12">
+                                <Label Text="Safety Zones"
+                                       FontSize="14"
+                                       FontAttributes="Bold"
+                                       TextColor="#1F2937"/>
+
+                                <HorizontalStackLayout Spacing="10">
+                                    <Ellipse Fill="#EF4444"
+                                            WidthRequest="12"
+                                            HeightRequest="12"
+                                            VerticalOptions="Center"/>
+                                    <Label Text="High Risk"
+                                           FontSize="13"
+                                           TextColor="#4B5563"
+                                           VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Spacing="10">
+                                    <Ellipse Fill="#F59E0B"
+                                            WidthRequest="12"
+                                            HeightRequest="12"
+                                            VerticalOptions="Center"/>
+                                    <Label Text="Moderate"
+                                           FontSize="13"
+                                           TextColor="#4B5563"
+                                           VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Spacing="10">
+                                    <Ellipse Fill="#10B981"
+                                            WidthRequest="12"
+                                            HeightRequest="12"
+                                            VerticalOptions="Center"/>
+                                    <Label Text="Safe Zone"
+                                           FontSize="13"
+                                           TextColor="#4B5563"
+                                           VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <!-- Map Control Buttons (Top Right) -->
+                        <VerticalStackLayout Margin="0,16,16,0"
+                                           Spacing="10"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Start">
+                            <!-- Filter Button -->
+                            <Border BackgroundColor="White"
+                                    StrokeThickness="0"
+                                    Padding="12"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="12"/>
+                                </Border.StrokeShape>
+                                <Border.Shadow>
+                                    <Shadow Brush="Black" Opacity="0.12" Radius="8" Offset="0,2"/>
+                                </Border.Shadow>
+                                <Image Source="filter_icon.png"
+                                       WidthRequest="20"
+                                       HeightRequest="20"/>
+                            </Border>
+
+                            <!-- Navigation/Compass Button -->
+                            <Border BackgroundColor="White"
+                                    StrokeThickness="0"
+                                    Padding="12"
+                                    WidthRequest="44"
+                                    HeightRequest="44">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="12"/>
+                                </Border.StrokeShape>
+                                <Border.Shadow>
+                                    <Shadow Brush="Black" Opacity="0.12" Radius="8" Offset="0,2"/>
+                                </Border.Shadow>
+                                <Image Source="compass_icon.png"
+                                       WidthRequest="20"
+                                       HeightRequest="20"/>
+                            </Border>
+                        </VerticalStackLayout>
+                    </Grid>
                 </Border>
+
+                <!-- Time Analysis Card -->
+                <Border BackgroundColor="White"
+                        StrokeThickness="0"
+                        Padding="20,18">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="16"/>
+                    </Border.StrokeShape>
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Opacity="0.08" Radius="12" Offset="0,4"/>
+                    </Border.Shadow>
+                    <VerticalStackLayout Spacing="14">
+                        <!-- Header Row -->
+                        <Grid>
+                            <HorizontalStackLayout Spacing="10">
+                                <Border BackgroundColor="#EEF2FF"
+                                        StrokeThickness="0"
+                                        Padding="9"
+                                        WidthRequest="36"
+                                        HeightRequest="36">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8"/>
+                                    </Border.StrokeShape>
+                                    <Image Source="clock_purple_icon.png"
+                                           WidthRequest="18"
+                                           HeightRequest="18"/>
+                                </Border>
+                                <Label Text="Time Analysis"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       TextColor="#1F2937"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="2:00 PM"
+                                   FontSize="17"
+                                   FontAttributes="Bold"
+                                   TextColor="#5B5FC7"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center"/>
+                        </Grid>
+
+                        <!-- Slider -->
+                        <VerticalStackLayout Spacing="8">
+                            <!-- Slider Track -->
+                            <Grid HeightRequest="6">
+                                <Border BackgroundColor="#E5E7EB"
+                                        StrokeThickness="0"
+                                        HeightRequest="6">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="3"/>
+                                    </Border.StrokeShape>
+                                </Border>
+
+                                <!-- Progress Fill -->
+                                <Border BackgroundColor="#5B5FC7"
+                                        StrokeThickness="0"
+                                        HeightRequest="6"
+                                        HorizontalOptions="Start"
+                                        WidthRequest="190">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="3"/>
+                                    </Border.StrokeShape>
+                                </Border>
+
+                                <!-- Slider Thumb -->
+                                <Ellipse Fill="#5B5FC7"
+                                        Stroke="White"
+                                        StrokeThickness="3"
+                                        WidthRequest="20"
+                                        HeightRequest="20"
+                                        HorizontalOptions="Start"
+                                        Margin="180,0,0,0">
+                                    <Ellipse.Shadow>
+                                        <Shadow Brush="Black" Opacity="0.2" Radius="6" Offset="0,2"/>
+                                    </Ellipse.Shadow>
+                                </Ellipse>
+                            </Grid>
+
+                            <!-- Time Labels -->
+                            <Grid ColumnSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0"
+                                       Text="12 AM"
+                                       FontSize="12"
+                                       TextColor="#9CA3AF"
+                                       HorizontalOptions="Start"/>
+                                <Label Grid.Column="1"
+                                       Text="12 PM"
+                                       FontSize="12"
+                                       TextColor="#9CA3AF"
+                                       HorizontalOptions="Center"/>
+                                <Label Grid.Column="2"
+                                       Text="11 PM"
+                                       FontSize="12"
+                                       TextColor="#9CA3AF"
+                                       HorizontalOptions="End"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Active Filters Section -->
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Active Filters"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#1F2937"/>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <!-- Crime Alerts (Active) -->
+                        <Border BackgroundColor="#FEE2E2"
+                                StrokeThickness="0"
+                                Padding="14,9">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <HorizontalStackLayout Spacing="6">
+                                <Image Source="warning_red_icon.png"
+                                       WidthRequest="16"
+                                       HeightRequest="16"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Crime Alerts"
+                                       FontSize="13"
+                                       FontAttributes="Bold"
+                                       TextColor="#991B1B"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Border>
+
+                        <!-- Traffic -->
+                        <Border BackgroundColor="White"
+                                StrokeThickness="1"
+                                Stroke="#E5E7EB"
+                                Padding="14,9">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <HorizontalStackLayout Spacing="6">
+                                <Image Source="car_icon.png"
+                                       WidthRequest="16"
+                                       HeightRequest="16"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Traffic"
+                                       FontSize="13"
+                                       FontAttributes="Bold"
+                                       TextColor="#4B5563"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Border>
+
+                        <!-- Well-lit Areas -->
+                        <Border BackgroundColor="White"
+                                StrokeThickness="1"
+                                Stroke="#E5E7EB"
+                                Padding="14,9">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <HorizontalStackLayout Spacing="6">
+                                <Image Source="eye_icon.png"
+                                       WidthRequest="16"
+                                       HeightRequest="16"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Well-lit Areas"
+                                       FontSize="13"
+                                       FontAttributes="Bold"
+                                       TextColor="#4B5563"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+                        </Border>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <!-- Zone Analysis Section -->
+                <VerticalStackLayout Spacing="14">
+                    <Grid>
+                        <Label Text="Zone Analysis"
+                               FontSize="17"
+                               FontAttributes="Bold"
+                               TextColor="#1F2937"/>
+                        <Label Text="View All"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="#5B5FC7"
+                               HorizontalOptions="End"
+                               VerticalOptions="Center"/>
+                    </Grid>
+
+                    <!-- Downtown District Card -->
+                    <Border BackgroundColor="White"
+                            StrokeThickness="0"
+                            Padding="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14"/>
+                        </Border.StrokeShape>
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Opacity="0.06" Radius="10" Offset="0,3"/>
+                        </Border.Shadow>
+                        <Grid ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Red Risk Bar -->
+                            <BoxView Grid.Column="0"
+                                     BackgroundColor="#EF4444">
+                                <BoxView.Clip>
+                                    <RoundRectangleGeometry CornerRadius="14,0,0,14" 
+                                                           Rect="0,0,5,80"/>
+                                </BoxView.Clip>
+                            </BoxView>
+
+                            <!-- Content -->
+                            <Grid Grid.Column="1" 
+                                  Padding="18,16" 
+                                  ColumnSpacing="12">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <VerticalStackLayout Grid.Column="0" 
+                                                   Spacing="4" 
+                                                   VerticalOptions="Center">
+                                    <Label Text="Downtown District"
+                                           FontSize="16"
+                                           FontAttributes="Bold"
+                                           TextColor="#1F2937"/>
+                                    <Label Text="High-risk delivery zone"
+                                           FontSize="13"
+                                           TextColor="#6B7280"/>
+                                </VerticalStackLayout>
+
+                                <Border Grid.Column="1"
+                                        BackgroundColor="#FEE2E2"
+                                        StrokeThickness="0"
+                                        Padding="12,6"
+                                        VerticalOptions="Center">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="6"/>
+                                    </Border.StrokeShape>
+                                    <Label Text="HIGH RISK"
+                                           FontSize="10"
+                                           FontAttributes="Bold"
+                                          
+                                           TextColor="#DC2626"/>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+
+                <!-- Bottom Spacing for Navigation Bar -->
+                <BoxView HeightRequest="80" Color="Transparent"/>
+
             </VerticalStackLayout>
         </ScrollView>
+
+        <!-- Bottom Navigation Bar -->
+        <Grid Grid.Row="2"
+              Padding="8,10,8,25"
+              BackgroundColor="White"
+              ColumnSpacing="0">
+            <Grid.Shadow>
+                <Shadow Brush="Black" Opacity="0.08" Radius="20" Offset="0,-4"/>
+            </Grid.Shadow>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Home -->
+            <VerticalStackLayout Grid.Column="0" 
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+                <Image Source="home_icon_gray.png"
+                       WidthRequest="24"
+                       HeightRequest="24"/>
+                <Label Text="Home"
+                       FontSize="11"
+                       TextColor="#9CA3AF"
+                       HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Routes (Active) -->
+            <VerticalStackLayout Grid.Column="1" 
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+                <Image Source="map_icon_purple.png"
+                       WidthRequest="24"
+                       HeightRequest="24"/>
+                <Label Text="Routes"
+                       FontSize="11"
+                       FontAttributes="Bold"
+                       TextColor="#5B5FC7"
+                       HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Alerts -->
+            <VerticalStackLayout Grid.Column="2" 
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+                <Image Source="bell_icon_gray.png"
+                       WidthRequest="24"
+                       HeightRequest="24"/>
+                <Label Text="Alerts"
+                       FontSize="11"
+                       TextColor="#9CA3AF"
+                       HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Profile -->
+            <VerticalStackLayout Grid.Column="3" 
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+                <Image Source="profile_icon_gray.png"
+                       WidthRequest="24"
+                       HeightRequest="24"/>
+                <Label Text="Profile"
+                       FontSize="11"
+                       TextColor="#9CA3AF"
+                       HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Grid>
     </Grid>
 
-  
 
 
-   
-       
-    
-    
+
+
+
+
 </ContentPage>
