@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="CourierSafetyAppDemo.AppShell"
-    
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:CourierSafetyAppDemo.Views"
     xmlns:local="clr-namespace:CourierSafetyAppDemo"
+    BackgroundColor="#F9FAFB"
+    FlyoutBackgroundColor="#FFFFFF"
+    FlyoutWidth="300"
     Title="CourierSafetyAppDemo">
-    
 
-    <ShellContent
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!-- Flyout Header -->
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="#6366F1" HeightRequest="180" Padding="20,40,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!-- Logo/Brand -->
+            <VerticalStackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+                <Border Stroke="#C7D2FE" StrokeThickness="2" BackgroundColor="#5B5FC7" WidthRequest="70" HeightRequest="70" StrokeShape="RoundRectangle 16">
+                    <Image Source="mapset.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit"/>
+                </Border>
+            </VerticalStackLayout>
+            <!-- App Title -->
+            <Label Grid.Row="1" Text="SAFEROUTE" TextColor="#FFFFFF" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,0"/>
+            <Label Grid.Row="2" Text="Courier Operations" TextColor="#C7D2FE" FontSize="12" HorizontalOptions="Center" Margin="0,4,0,0"/>
+        </Grid>
+    </Shell.FlyoutHeader>
 
+    <!-- Main Content Pages -->
+    <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate views:DashBoardView}" Route="dashboard" Icon="home.png"/>
     
+    <ShellContent Title="Routes" ContentTemplate="{DataTemplate views:RoutesViewl}" Route="routes" Icon="mapicon.png"/>
+    
+    <ShellContent Title="Notifications" ContentTemplate="{DataTemplate local:NotificationsView}" Route="notifications" Icon="bell.png"/>
+    
+    <ShellContent Title="Profile" ContentTemplate="{DataTemplate views:ProfileView}" Route="profile" Icon="pfp.png"/>
+
+    <!-- Flyout Footer -->
+    <Shell.FlyoutFooter>
+        <Grid BackgroundColor="#FFFFFF" Padding="20" Margin="0,10,0,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!-- User Info -->
+            <Border Grid.Row="0" Stroke="#E5E7EB" StrokeThickness="1" BackgroundColor="#F9FAFB" Padding="12" Margin="0,0,0,16" StrokeShape="RoundRectangle 12">
+                <HorizontalStackLayout Spacing="12">
+                    <Border BackgroundColor="#6366F1" WidthRequest="44" HeightRequest="44" StrokeShape="RoundRectangle 22">
+                        <Image Source="pfp.png" WidthRequest="24" HeightRequest="24" Aspect="AspectFit"/>
+                    </Border>
+                    <VerticalStackLayout VerticalOptions="Center" Spacing="2">
+                        <Label Text="COURIER" TextColor="#111827" FontSize="14" FontAttributes="Bold"/>
+                        <Label Text="ID: OP-2847" TextColor="#6B7280" FontSize="11"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            <!-- App Version -->
+            <Label Grid.Row="1" Text="SafeRoute v1.0" TextColor="#9CA3AF" FontSize="11" HorizontalOptions="Center"/>
+        </Grid>
+    </Shell.FlyoutFooter>
+
 </Shell>

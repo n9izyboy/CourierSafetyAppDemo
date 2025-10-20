@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CourierSafetyAppDemo.Views.NotificationsView"
-             Title="NotificationsView">
-
+             x:Class="CourierSafetyAppDemo.NotificationsView"
+             xmlns:viewmodels="clr-namespace:CourierSafetyAppDemo.ViewModels"
+             x:DataType="viewmodels:NotificationsViewModel"
+             Title="{Binding Title}"
+             BackgroundColor="#F9FAFB">
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -238,7 +240,7 @@
                                 <Label Text="HIGH"
                                        FontSize="10"
                                        FontAttributes="Bold"
-                                       
+                                      
                                        TextColor="#DC2626"/>
                             </Border>
                         </VerticalStackLayout>
@@ -396,7 +398,7 @@
                                 <Label Text="LOW"
                                        FontSize="10"
                                        FontAttributes="Bold"
-                                      
+                                       
                                        TextColor="#059669"
                                        VerticalOptions="Center"/>
                                 <Image Source="check_circle_green.png"

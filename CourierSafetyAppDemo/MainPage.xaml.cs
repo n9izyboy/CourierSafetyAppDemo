@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using CourierSafetyAppDemo.ViewModels;
+using Microsoft.Maui.Controls;
 
 namespace CourierSafetyAppDemo
 {
@@ -7,16 +8,7 @@ namespace CourierSafetyAppDemo
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void OnDashboardTapped(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void OnDriversTapped(object sender, EventArgs e)
-        {
-           
+            BindingContext = new MainViewModel();
         }
     }
 }

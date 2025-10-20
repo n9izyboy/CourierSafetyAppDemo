@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CourierSafetyAppDemo.Views.ProfileView"
-             Title="ProfileView">
-    
-    
-    
+             xmlns:viewmodels="clr-namespace:CourierSafetyAppDemo.ViewModels"
+             x:DataType="viewmodels:ProfileViewModel"
+             Title="{Binding Title}"
+             BackgroundColor="#F9FAFB">
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -703,7 +703,9 @@
             <VerticalStackLayout Grid.Column="0" 
                                Spacing="4" 
                                HorizontalOptions="Center">
-               
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToDashboardCommand}"/>
+                </VerticalStackLayout.GestureRecognizers>
                 <Image Source="home_icon_gray.png"
                        WidthRequest="24"
                        HeightRequest="24"/>
@@ -717,7 +719,9 @@
             <VerticalStackLayout Grid.Column="1" 
                                Spacing="4" 
                                HorizontalOptions="Center">
-                
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToRoutesCommand}"/>
+                </VerticalStackLayout.GestureRecognizers>
                 <Image Source="map_icon_gray.png"
                        WidthRequest="24"
                        HeightRequest="24"/>
@@ -729,8 +733,11 @@
 
             <!-- Alerts -->
             <VerticalStackLayout Grid.Column="2" 
-                               Spacing="4" >
-
+                               Spacing="4" 
+                               HorizontalOptions="Center">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToAlertsCommand}"/>
+                </VerticalStackLayout.GestureRecognizers>
                 <Image Source="bell_icon_gray.png"
                        WidthRequest="24"
                        HeightRequest="24"/>
@@ -744,7 +751,9 @@
             <VerticalStackLayout Grid.Column="3" 
                                Spacing="4" 
                                HorizontalOptions="Center">
-              
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToProfileCommand}"/>
+                </VerticalStackLayout.GestureRecognizers>
                 <Border BackgroundColor="#E0E7FF"
                         StrokeThickness="0"
                         Padding="12,8"
@@ -759,6 +768,11 @@
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
                 </Border>
+                <Label Text="Profile"
+                       FontSize="11"
+                       FontAttributes="Bold"
+                       TextColor="#6366F1"
+                       HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </Grid>
     </Grid>

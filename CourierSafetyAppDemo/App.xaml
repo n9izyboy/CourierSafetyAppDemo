@@ -2,6 +2,7 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CourierSafetyAppDemo"
+             xmlns:converters="clr-namespace:CourierSafetyAppDemo.Converters"
              x:Class="CourierSafetyAppDemo.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -9,6 +10,11 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Converters -->
+            <converters:InvertedBoolConverter x:Key="InvertedBoolConverter"/>
+            <converters:BoolToColorConverter x:Key="BoolToColorConverter"/>
+            <converters:EqualConverter x:Key="EqualConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
